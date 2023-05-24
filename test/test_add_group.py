@@ -1,8 +1,8 @@
 from model.group import Group
 
 
-def test_add_group(app):
-    group = Group(name="group1")
+def test_add_group(app, excel_groups):
+    group = Group(name=excel_groups)
 
     old_groups = app.group.get_groups_list()
     app.group.add_group(group)
